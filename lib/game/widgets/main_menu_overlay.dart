@@ -50,7 +50,7 @@ class _MainMenuOverlayState extends State<MainMenuOverlay> {
                     child: Text('Select your Car Model:',
                         style: Theme.of(context).textTheme.headlineSmall!),
                   ),
-                  if (!screenHeightIsSmall) const WhiteSpace(height: 30),
+                  const WhiteSpace(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -91,7 +91,7 @@ class _MainMenuOverlayState extends State<MainMenuOverlay> {
                       ),
                     ],
                   ),
-                  if (!screenHeightIsSmall) const WhiteSpace(height: 50),
+                  const WhiteSpace(height: 50),
                   Center(
                     child: ElevatedButton(
                       onPressed: () async {

@@ -54,61 +54,61 @@ class GameOverlayState extends State<GameOverlay> {
               },
             ),
           ),
-          if (isMobile)
-            Positioned(
-              bottom: 10,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 24),
-                          child: GestureDetector(
-                            onTapDown: (details) {
-                              (widget.game as CarRace).player.moveLeft();
-                            },
-                            onTapUp: (details) {
-                              (widget.game as CarRace).player.resetDirection();
-                            },
-                            child: Material(
-                              color: Colors.transparent,
-                              elevation: 3.0,
-                              shadowColor:
-                                  Theme.of(context).colorScheme.background,
-                              child: const Icon(Icons.arrow_left, size: 64),
-                            ),
+          // if (isMobile)
+          Positioned(
+            bottom: 10,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 24),
+                        child: GestureDetector(
+                          onTapDown: (details) {
+                            (widget.game as CarRace).player.moveLeft();
+                          },
+                          onTapUp: (details) {
+                            (widget.game as CarRace).player.resetDirection();
+                          },
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 3.0,
+                            shadowColor:
+                                Theme.of(context).colorScheme.background,
+                            child: const Icon(Icons.arrow_left, size: 64),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 24),
-                          child: GestureDetector(
-                            onTapDown: (details) {
-                              (widget.game as CarRace).player.moveRight();
-                            },
-                            onTapUp: (details) {
-                              (widget.game as CarRace).player.resetDirection();
-                            },
-                            child: Material(
-                              color: Colors.transparent,
-                              elevation: 3.0,
-                              shadowColor:
-                                  Theme.of(context).colorScheme.background,
-                              child: const Icon(Icons.arrow_right, size: 64),
-                            ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 24),
+                        child: GestureDetector(
+                          onTapDown: (details) {
+                            (widget.game as CarRace).player.moveRight();
+                          },
+                          onTapUp: (details) {
+                            (widget.game as CarRace).player.resetDirection();
+                          },
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 3.0,
+                            shadowColor:
+                                Theme.of(context).colorScheme.background,
+                            child: const Icon(Icons.arrow_right, size: 64),
                           ),
                         ),
-                      ],
-                    ),
-                    const WhiteSpace(
-                      height: 20,
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                  const WhiteSpace(
+                    height: 20,
+                  ),
+                ],
               ),
             ),
+          ),
           if (isPaused)
             Positioned(
               top: MediaQuery.of(context).size.height / 2 - 72.0,
