@@ -1,4 +1,4 @@
-***uilding a Car Race Game with Flutter and Flame [Part 1]***
+***Building a Car Race Game with Flutter and Flame [Part 1]***
 
 **Detail Medium article:**
 https://medium.com/@amitsingh506142/building-a-car-race-game-with-flutter-and-flame-part-1-f68e9e779b09
