@@ -25,8 +25,6 @@ class _MainMenuOverlayState extends State<MainMenuOverlay> {
           ? Theme.of(context).textTheme.displayLarge!
           : Theme.of(context).textTheme.displaySmall!;
 
-      final bool screenHeightIsSmall = constraints.maxHeight < 760;
-
       return Material(
         color: Theme.of(context).colorScheme.background,
         child: Padding(
