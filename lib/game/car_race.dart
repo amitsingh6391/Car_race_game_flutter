@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:mario_game/game/background.dart';
 import 'package:mario_game/game/managers/game_manager.dart';
 import 'package:mario_game/game/managers/object_manager.dart';
-import 'package:mario_game/game/sprites/platform.dart';
+import 'package:mario_game/game/sprites/competitor.dart';
 import 'package:mario_game/game/sprites/player.dart';
 
 enum Character {

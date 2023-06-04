@@ -1,10 +1,9 @@
 import 'dart:math';
-
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:mario_game/game/car_race.dart';
 
-abstract class Platform<T> extends SpriteGroupComponent<T>
+abstract class Competitor<T> extends SpriteGroupComponent<T>
     with HasGameRef<CarRace>, CollisionCallbacks {
   final hitbox = RectangleHitbox();
 
@@ -12,7 +11,7 @@ abstract class Platform<T> extends SpriteGroupComponent<T>
   final Vector2 _velocity = Vector2.zero();
   double speed = 150;
 
-  Platform({
+  Competitor({
     super.position,
   }) : super(
           size: Vector2.all(80),
@@ -58,7 +57,7 @@ abstract class Platform<T> extends SpriteGroupComponent<T>
 
 enum EnemyPlatformState { only }
 
-class EnemyPlatform extends Platform<EnemyPlatformState> {
+class EnemyPlatform extends Competitor<EnemyPlatformState> {
   EnemyPlatform({super.position});
 
   final List<String> enemy = [

@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flame/components.dart';
 import 'package:mario_game/game/managers/game_manager.dart';
 import 'package:mario_game/game/car_race.dart';
-import 'package:mario_game/game/sprites/platform.dart';
+import 'package:mario_game/game/sprites/competitor.dart';
 
 final Random _rand = Random();
 
